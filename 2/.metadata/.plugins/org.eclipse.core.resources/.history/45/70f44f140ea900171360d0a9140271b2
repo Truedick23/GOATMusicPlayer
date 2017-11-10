@@ -1,0 +1,69 @@
+package Triangle;
+
+import java.util.*;
+import java.text.*;  
+
+class Point {
+	Point(double X, double Y) {
+		x = X;
+		y = Y;
+	}
+	private double x;
+	public double getX() {
+		return x;
+	}
+	private double y;
+	public double getY() {
+		return y;
+	}
+	public double getDistance(Point p) {
+		return Math.sqrt((x - p.getX()) * (x - p.getX())  + (y - p.getY()) * (y - p.getY()));
+	}
+}
+
+public class Triangle {
+	Triangle (Point p1, Point p2, Point p3) {
+		point1 = p1;
+		point2 = p2;
+		point3 = p3;
+	}
+	private Point point1;
+	private Point point2;
+	private Point point3;
+	public double getArea() {
+		double k1 = point1.getX() - point2.getX();
+		double k2 = point1.getY() - point2.getY();
+		double k3 = k1 * k2;
+		double distance = Math.abs(k1 * point3.getY() + k2 + point3.getX() + k3)/Math.sqrt(k1 * k1 + k2 * k2);
+		double length = Math.sqrt(k1 * k1 + k2 * k2);
+		return distance * length / 2;
+	}
+	public double getCircumference() {
+		double length1 = point1.getDistance(point2);
+		double length2 = point1.getDistance(point3);
+		double length3 = point2.getDistance(point3);
+		return length1 + length2 + length3;
+	}
+	public static void main(String arg[]) {
+		DecimalFormat df = new DecimalFormat("0.0000"); 
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Point 1: ");
+		float a1 = sc.nextFloat();
+		float b1 = sc.nextFloat();
+		System.out.println("Point 2: ");
+		float a2 = sc.nextFloat();
+		float b2 = sc.nextFloat();
+		System.out.println("Point 3: ");
+		float a3 = sc.nextFloat();
+		float b3 = sc.nextFloat();
+		Point point1 = new Point(a1, b1);
+		Point point2 = new Point(a2, b2);
+		Point point3 = new Point(a3, b3);
+		Triangle tri = new Triangle(point1, point2, point3);
+		System.out.println(" Area: " +  df.format(tri.getArea()));
+		System.out.println(" Circumference: " + df.format(tri.getCircumference()));
+		return;
+		
+	}
+}
+

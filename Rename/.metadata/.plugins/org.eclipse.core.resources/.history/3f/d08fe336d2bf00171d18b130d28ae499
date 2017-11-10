@@ -1,0 +1,36 @@
+package Renamian;
+import java.util.*;
+import java.io.File;
+
+public class Renamian {
+	public Renamian() {
+	}
+	private static ArrayList tracks;
+	public static void getTracks(String tracksFl) {
+		Scanner sc = new Scanner(tracksFl);
+		int n = sc.nextInt();
+		ArrayList tracks = new ArrayList();
+		for(int i = 0; i < n; i++) {
+			String info = sc.nextLine();
+			String[] format = info.split("\\s");
+			tracks.add(format[1]);
+		}
+		sc.close();
+	}
+	public static void main(String args[]) {
+		File renamer = new File("E:\\CloudMusic\\Yeah Yeah Yeahs\\Fever To Tell");
+		File[] files = renamer.listFiles();
+		getTracks("D:\\test.txt");
+		
+		int len = files.length;
+		for(int i = 0; i < len; i++) {
+			String name = files[i].getName();
+			System.out.println(name);
+			String[] sp = name.split(" -");
+			int index = tracks.indexOf(sp[0]);
+			System.out.println(index);
+			//String newName = index + " - " + tracks.get(index);
+			//System.out.println(newName);
+		}
+	}
+}

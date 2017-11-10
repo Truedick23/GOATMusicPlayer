@@ -1,0 +1,47 @@
+package Renamian;
+import java.util.*;
+import java.io.File;
+import java.io.FileNotFoundException;
+
+public class Renamian {
+	public Renamian() {
+	}
+	public static void getTracks(String tracksFl) {
+		Scanner sc = new Scanner(tracksFl);
+		int n = sc.nextInt();
+		String[] tracks = new String[n + 1];
+		for(int i = 0; i < n; i++) {
+			String info = sc.nextLine();
+			String[] format = info.split("\\s");
+			tracks[i + 1] = format[1];
+		}
+		sc.close();
+	}
+	public static void main(String args[]) throws FileNotFoundException {
+		File renamer = new File("E:\\CloudMusic\\Yeah Yeah Yeahs\\Fever To Tell");
+		File[] files = renamer.listFiles();
+		File txt = new File("D:\\test.txt");
+		Scanner sc = new Scanner(txt);
+		int n = sc.nextInt();
+		String[] tracks = new String[40];
+		for(int i = 0; i < n; i++) {
+			String info = sc.nextLine();
+			String[] format = info.split(" .");
+			tracks[i + 1] = format[1];
+		}
+
+		sc.close();
+		int len = files.length;
+		for(int i = 0; i < len; i++) {
+			String name = files[i].getName();
+			String[] sp = name.split(" -");
+			System.out.println(sp[0]);
+			for(int j = 0; j < n; j++) {
+				if(tracks[i].equals(sp[0]));
+				String newName = j + " - " + tracks[j];
+				System.out.println(newName);
+			}
+			//System.out.println(newName);
+		}
+	}
+}

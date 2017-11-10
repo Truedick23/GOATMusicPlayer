@@ -1,0 +1,5 @@
+package Ding.Factory;
+
+public interface Provier {
+	public Sender produce();
+}

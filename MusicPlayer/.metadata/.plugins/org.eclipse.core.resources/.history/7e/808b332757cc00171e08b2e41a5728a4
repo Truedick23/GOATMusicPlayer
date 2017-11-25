@@ -1,0 +1,9 @@
+package Interface;
+
+import java.awt.Color;
+import java.awt.List;
+
+public class SongLists extends JPanel {
+	String[] ls = {"1", "2", "3"};
+	JList songlist
+}

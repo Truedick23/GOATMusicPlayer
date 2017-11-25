@@ -1,0 +1,17 @@
+INDEX VERSION 1.129+D:\Java Experiments\MusicPlayer\.metadata\.plugins\org.eclipse.jdt.core
+4279374420.index
+1514240049.index
+1067094681.index
+3533414052.index
+2235901422.index
+3355333773.index
+4078015476.index
+2180291185.index
+3720021982.index
+1197647796.index
+4066776925.index
+2311162639.index
+434283389.index
+590397997.index
+378987592.index
+1134117130.index

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;Interface.SongList.java&apos; to &apos;SongListsPanel.java&apos;&#x0D;&#x0A;- Original project: &apos;MusicPlayer&apos;&#x0D;&#x0A;- Original element: &apos;Interface.SongList.java&apos;&#x0D;&#x0A;- Renamed element: &apos;Interface.SongListsPanel.java&apos;" description="Rename compilation unit &apos;SongList.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;Interface{SongList.java" name="SongListsPanel.java" references="false" stamp="1511006035018" version="1.0"/>
+</session>
